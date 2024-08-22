@@ -1,4 +1,4 @@
-# Disaster Media
+# Natural Disaster Data Distribution
 
 A real-time system designed to collect, process, and distribute media content related to natural disasters from social media platforms. The project features:
 
