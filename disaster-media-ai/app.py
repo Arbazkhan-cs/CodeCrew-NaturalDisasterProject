@@ -27,7 +27,7 @@ promptTemplate = [
         Determine if the content is related to a natural disaster (e.g., earthquake, flood, hurricane, wildfire, etc.).
         If unrelated, return False.
     If Related:
-        Summarize the content concisely and provide key details.
+        Summarize the content concisely and provide key details in minimum of 50 words.
         Structure the summary in the following JSON format:
      <startJson>
         "text": "Main heading summarizing the key point of the news",
@@ -64,8 +64,8 @@ tools = [get_date]
 agent = create_tool_calling_agent(llm=llm, tools=tools, prompt=prompt)
 agent_executor = AgentExecutor(agent=agent, tools=tools, verbose=True)
 
-# FINAL FUNCTION TO GET RESPONSE
-def get_response(text, description, id_):
+# FINAL FUNCTION TO GET RESPONSE FOR EACH ITEM
+def process_item(text, description, id_):
     try:
         # Invoke the agent with the provided text and description
         response = agent_executor.invoke({"text": text, "description": description})
@@ -102,20 +102,24 @@ def get_response(text, description, id_):
         logging.error(f"An unexpected error occurred: {e}")
         return {"error": "An unexpected error occurred during processing"}
 
-# Define API endpoint
+# Define API endpoint to handle multiple items
 @app.route('/summarize', methods=['POST'])
 def summarize():
     data = request.get_json()
-    text = data.get("text", "")
-    description = data.get("description", "")
-    id_ = data.get("id_", "")
+    responses = []
 
-    if not text or not description:
-        return jsonify({"error": "Text and description are required"}), 400
+    for item in data:
+        text = item.get("text", "")
+        description = item.get("description", "")
+        id_ = item.get("id", "")
 
-    response = get_response(text=text, description=description, id_=id_)
+        if not text or not description:
+            responses.append({"id": id_, "error": "Text and description are required"})
+        else:
+            response = process_item(text=text, description=description, id_=id_)
+            responses.append(response)
 
-    return jsonify(response), 200
+    return jsonify(responses), 200
 
 @app.route('/', methods=['GET'])
 def home():
