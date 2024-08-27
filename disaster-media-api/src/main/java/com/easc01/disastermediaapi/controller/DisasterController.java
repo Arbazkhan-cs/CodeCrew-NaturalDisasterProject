@@ -3,6 +3,8 @@ package com.easc01.disastermediaapi.controller;
 import com.easc01.disastermediaapi.constant.AppConstant;
 import com.easc01.disastermediaapi.dto.ApiResponse;
 import com.easc01.disastermediaapi.dto.disaster.DisasterData;
+import com.easc01.disastermediaapi.model.Disaster;
+import com.easc01.disastermediaapi.repository.DisasterRepository;
 import com.easc01.disastermediaapi.service.DisasterService;
 import com.easc01.disastermediaapi.util.IDUtil;
 import io.swagger.v3.oas.annotations.Operation;
@@ -20,6 +22,7 @@ import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 @Slf4j
 @RestController
@@ -29,6 +32,7 @@ import java.util.List;
 public class DisasterController {
 
     private final DisasterService disasterService;
+    private final DisasterRepository disasterRepository;
 
     @GetMapping(value = AppConstant.ALL)
     @Operation(description = "Returns natural disasters from the entire archive by certain criteria, leave params blank to ignore.")
@@ -100,5 +104,21 @@ public class DisasterController {
         return new ResponseEntity<>(apiResponse, apiResponse.getHttpStatus());
     }
 
+    @GetMapping(value = "/search-record")
+    @Operation(description = "Returns natural disasters by Record ID.")
+    public ResponseEntity<?> getByRecordId(
+            @RequestParam(name = "id") String recordId
+    ) {
+        try {
+            Optional<Disaster> disasterOptional = disasterRepository.findByRecordIdWithVideos(recordId);
+            if (disasterOptional.isPresent()) {
+                return new ResponseEntity<>(disasterOptional.get(), HttpStatus.OK);
+            } else {
+                return new ResponseEntity<>("Not Found", HttpStatus.OK);
+            }
+        } catch (Exception e) {
+            return new ResponseEntity<>("Something went wrong", HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
 }

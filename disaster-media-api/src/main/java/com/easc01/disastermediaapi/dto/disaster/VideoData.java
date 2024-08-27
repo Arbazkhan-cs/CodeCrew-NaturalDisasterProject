@@ -12,6 +12,7 @@ import java.time.Instant;
 public class VideoData {
     private String title;
     private String description;
+    private String thumbnail;
     private String url;
     private Instant publishedDate;
 }

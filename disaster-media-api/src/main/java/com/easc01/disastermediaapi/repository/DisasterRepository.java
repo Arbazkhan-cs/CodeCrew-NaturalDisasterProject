@@ -9,6 +9,7 @@ import org.springframework.stereotype.Repository;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 @Repository
 public interface DisasterRepository extends JpaRepository<Disaster, Long> {
@@ -16,8 +17,8 @@ public interface DisasterRepository extends JpaRepository<Disaster, Long> {
     @Query("SELECT d FROM Disaster d LEFT JOIN FETCH d.videos")
     List<Disaster> findAllWithVideos();
 
-    @Query("SELECT d FROM Disaster d WHERE d.recordId = :recordId")
-    Optional<Disaster> findByRecordId(@Param("recordId") String recordId);
+    @Query("SELECT d FROM Disaster d LEFT JOIN FETCH d.videos WHERE d.recordId = :recordId")
+    Optional<Disaster> findByRecordIdWithVideos(@Param("recordId") String recordId);
 
     @Query("SELECT DISTINCT d FROM Disaster d " +
             "JOIN FETCH d.videos v " +
@@ -26,7 +27,7 @@ public interface DisasterRepository extends JpaRepository<Disaster, Long> {
             "AND (:type = '' OR LOWER(d.incidentType) LIKE LOWER(CONCAT('%', :type, '%'))) " +
             "AND (:location = '' OR LOWER(d.incidentLocation) LIKE LOWER(CONCAT('%', :location, '%'))) " +
             "AND v.publishedDate BETWEEN :startDate AND :endDate " +
-            "ORDER BY d.updatedAt")
+            "ORDER BY d.updatedAt DESC")
     List<Disaster> findDisastersByCriteria(
             @Param("searchTag") String searchTag,
             @Param("type") String type,
@@ -35,5 +36,6 @@ public interface DisasterRepository extends JpaRepository<Disaster, Long> {
             @Param("endDate") Instant endDate
     );
 
-
+    @Query("SELECT d FROM Disaster d LEFT JOIN FETCH d.videos WHERE d.recordId IN :recordIds")
+    List<Disaster> findAllByRecordIdIn(@Param("recordIds") Set<String> recordIds);
 }

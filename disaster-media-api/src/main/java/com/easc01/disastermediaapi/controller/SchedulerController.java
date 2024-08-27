@@ -2,17 +2,17 @@ package com.easc01.disastermediaapi.controller;
 
 import com.easc01.disastermediaapi.constant.AppConstant;
 import com.easc01.disastermediaapi.dto.ApiResponse;
-import com.easc01.disastermediaapi.dto.youtube.YouTubeSearchList;
-import com.easc01.disastermediaapi.service.YouTubeService;
+import com.easc01.disastermediaapi.service.DisasterSchedulerService;
 import com.easc01.disastermediaapi.util.IDUtil;
 import io.swagger.v3.oas.annotations.Hidden;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.yaml.snakeyaml.events.Event;
 
 import java.time.Instant;
 import java.util.Date;
@@ -21,25 +21,27 @@ import java.util.Date;
 @Hidden
 @RestController
 @RequiredArgsConstructor
-@RequestMapping(path = AppConstant.YOUTUBE)
-public class YoutubeController {
+@RequestMapping(path = AppConstant.SCRAP)
+public class SchedulerController {
 
-    private final YouTubeService youTubeService;
+    private final DisasterSchedulerService disasterSchedulerService;
 
-    @GetMapping(value = AppConstant.RECENT)
-    public ResponseEntity<ApiResponse<YouTubeSearchList>> getDisasters() {
-        ApiResponse<YouTubeSearchList> apiResponse = new ApiResponse<>();
+    @PostMapping(AppConstant.DISASTER)
+    public ResponseEntity<ApiResponse<Double>> scrapDisasters() {
+        ApiResponse<Double> apiResponse = new ApiResponse<>();
         apiResponse.setRequestId(String.valueOf(IDUtil.generateHttpRequestId()));
 
         try {
-            apiResponse.setData(youTubeService.fetchRecentNaturalDisastersPosts());
-            apiResponse.setMessage("Recent YouTube Disaster Details Fetched");
+            apiResponse.setData(disasterSchedulerService.collectAndSaveDisastersFromYouTube());
             apiResponse.setHttpStatus(HttpStatus.OK);
+            apiResponse.setMessage("Data scrapped successfully");
+            log.error("Scrapped disaster data successfully");
 
         } catch (Exception e) {
-            log.error("Failed to get YouTube Disaster Data");
+            apiResponse.setMessage("Failed to scrap data");
             apiResponse.setHttpStatus(HttpStatus.INTERNAL_SERVER_ERROR);
-            apiResponse.setMessage("Failed to get YouTube Disaster Data");
+            log.error("Failed to scrap disaster data");
+
         }
 
         apiResponse.setTimestamp(Date.from(Instant.now()));

@@ -20,6 +20,7 @@ public class Video {
 
     private String title;
     private String url;
+    private String thumbnail;
 
     @Column(length = 5000)
     private String description;
@@ -30,4 +31,17 @@ public class Video {
     @JsonBackReference
     @JoinColumn(name = "disaster_id")
     private Disaster disaster;
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Video video = (Video) o;
+        return url != null && url.equals(video.url);
+    }
+
+    @Override
+    public int hashCode() {
+        return url != null ? url.hashCode() : 0;
+    }
 }

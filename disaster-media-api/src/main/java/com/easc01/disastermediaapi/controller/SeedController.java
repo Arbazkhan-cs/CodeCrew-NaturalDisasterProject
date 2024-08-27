@@ -80,6 +80,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G")
                             .url("https://www.youtube.com/watch?v=LLe9Bic7WUw")
+                            .thumbnail("https://img.youtube.com/vi/LLe9Bic7WUw/mqdefault.jpg")
                             .description("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G" +
                                     "A powerful earthquake struck off Japan’s southern coast on August 8, triggering a tsunami advisory. Residents were urged to stay away from the coastline, but there were no immediate reports of injuries or serious damage." +
                                     "#Japan #japanearthquake #news18live" +
@@ -93,6 +94,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake: Why Japan issued its first-ever 'megaquake advisory' | WION Pulse")
                             .url("https://www.youtube.com/watch?v=FCL2K1GX_U4")
+                            .thumbnail("https://img.youtube.com/vi/FCL2K1GX_U4/mqdefault.jpg")
                             .description("Japan has issued its first-ever advisory on higher-than-usual risks of a megaquake after an earthquake of magnitude 7.1 jolted on Thursday at the edge of a tremulous seabed zone along the Pacific coast known as the Nankai Trough. A possible Nankai megaquake and tsunami disaster could kill hundreds of thousands of people and cause a trillion-dollar damage to Japan." +
                                     "#japan #japanearthquake #trendingnews " +
                                     "About Channel: " +
@@ -118,6 +120,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan trembles under the shadow of Megaquake | Latest News | WION")
                             .url("https://www.youtube.com/watch?v=ddN-23IKbwA")
+                            .thumbnail("https://img.youtube.com/vi/ddN-23IKbwA/mqdefault.jpg")
                             .description("Megaquake alert in Japan. Experts say 70% chance of a magnitude 8 or 9 striking. Japan's meteorological agency maintains Megaquake advisory. Watch in for more details." +
                                     "#japanearthquake #megaquake #climatechange " +
                                     "About Channel: " +
@@ -145,6 +148,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G")
                             .url("https://www.youtube.com/watch?v=LLe9Bic7WUw")
+                            .thumbnail("https://img.youtube.com/vi/LLe9Bic7WUw/mqdefault.jpg")
                             .description("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G" +
                                     "A powerful earthquake struck off Japan’s southern coast on August 8, triggering a tsunami advisory. Residents were urged to stay away from the coastline, but there were no immediate reports of injuries or serious damage." +
                                     "#Japan #japanearthquake #news18live" +
@@ -158,6 +162,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake: Why Japan issued its first-ever 'megaquake advisory' | WION Pulse")
                             .url("https://www.youtube.com/watch?v=FCL2K1GX_U4")
+                            .thumbnail("https://img.youtube.com/vi/FCL2K1GX_U4/mqdefault.jpg")
                             .description("Japan has issued its first-ever advisory on higher-than-usual risks of a megaquake after an earthquake of magnitude 7.1 jolted on Thursday at the edge of a tremulous seabed zone along the Pacific coast known as the Nankai Trough. A possible Nankai megaquake and tsunami disaster could kill hundreds of thousands of people and cause a trillion-dollar damage to Japan." +
                                     "#japan #japanearthquake #trendingnews " +
                                     "About Channel: " +
@@ -183,6 +188,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan trembles under the shadow of Megaquake | Latest News | WION")
                             .url("https://www.youtube.com/watch?v=ddN-23IKbwA")
+                            .thumbnail("https://img.youtube.com/vi/ddN-23IKbwA/mqdefault.jpg")
                             .description("Megaquake alert in Japan. Experts say 70% chance of a magnitude 8 or 9 striking. Japan's meteorological agency maintains Megaquake advisory. Watch in for more details." +
                                     "#japanearthquake #megaquake #climatechange " +
                                     "About Channel: " +
@@ -210,6 +216,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G")
                             .url("https://www.youtube.com/watch?v=LLe9Bic7WUw")
+                            .thumbnail("https://img.youtube.com/vi/LLe9Bic7WUw/mqdefault.jpg")
                             .description("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G" +
                                     "A powerful earthquake struck off Japan’s southern coast on August 8, triggering a tsunami advisory. Residents were urged to stay away from the coastline, but there were no immediate reports of injuries or serious damage." +
                                     "#Japan #japanearthquake #news18live" +
@@ -223,6 +230,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake: Why Japan issued its first-ever 'megaquake advisory' | WION Pulse")
                             .url("https://www.youtube.com/watch?v=FCL2K1GX_U4")
+                            .thumbnail("https://img.youtube.com/vi/FCL2K1GX_U4/mqdefault.jpg")
                             .description("Japan has issued its first-ever advisory on higher-than-usual risks of a megaquake after an earthquake of magnitude 7.1 jolted on Thursday at the edge of a tremulous seabed zone along the Pacific coast known as the Nankai Trough. A possible Nankai megaquake and tsunami disaster could kill hundreds of thousands of people and cause a trillion-dollar damage to Japan." +
                                     "#japan #japanearthquake #trendingnews " +
                                     "About Channel: " +
@@ -248,6 +256,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan trembles under the shadow of Megaquake | Latest News | WION")
                             .url("https://www.youtube.com/watch?v=ddN-23IKbwA")
+                            .thumbnail("https://img.youtube.com/vi/ddN-23IKbwA/mqdefault.jpg")
                             .description("Megaquake alert in Japan. Experts say 70% chance of a magnitude 8 or 9 striking. Japan's meteorological agency maintains Megaquake advisory. Watch in for more details." +
                                     "#japanearthquake #megaquake #climatechange " +
                                     "About Channel: " +
@@ -275,6 +284,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G")
                             .url("https://www.youtube.com/watch?v=LLe9Bic7WUw")
+                            .thumbnail("https://img.youtube.com/vi/LLe9Bic7WUw/mqdefault.jpg")
                             .description("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G" +
                                     "A powerful earthquake struck off Japan’s southern coast on August 8, triggering a tsunami advisory. Residents were urged to stay away from the coastline, but there were no immediate reports of injuries or serious damage." +
                                     "#Japan #japanearthquake #news18live" +
@@ -288,6 +298,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake: Why Japan issued its first-ever 'megaquake advisory' | WION Pulse")
                             .url("https://www.youtube.com/watch?v=FCL2K1GX_U4")
+                            .thumbnail("https://img.youtube.com/vi/FCL2K1GX_U4/mqdefault.jpg")
                             .description("Japan has issued its first-ever advisory on higher-than-usual risks of a megaquake after an earthquake of magnitude 7.1 jolted on Thursday at the edge of a tremulous seabed zone along the Pacific coast known as the Nankai Trough. A possible Nankai megaquake and tsunami disaster could kill hundreds of thousands of people and cause a trillion-dollar damage to Japan." +
                                     "#japan #japanearthquake #trendingnews " +
                                     "About Channel: " +
@@ -313,6 +324,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan trembles under the shadow of Megaquake | Latest News | WION")
                             .url("https://www.youtube.com/watch?v=ddN-23IKbwA")
+                            .thumbnail("https://img.youtube.com/vi/ddN-23IKbwA/mqdefault.jpg")
                             .description("Megaquake alert in Japan. Experts say 70% chance of a magnitude 8 or 9 striking. Japan's meteorological agency maintains Megaquake advisory. Watch in for more details." +
                                     "#japanearthquake #megaquake #climatechange " +
                                     "About Channel: " +
@@ -340,6 +352,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G")
                             .url("https://www.youtube.com/watch?v=LLe9Bic7WUw")
+                            .thumbnail("https://img.youtube.com/vi/LLe9Bic7WUw/mqdefault.jpg")
                             .description("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G" +
                                     "A powerful earthquake struck off Japan’s southern coast on August 8, triggering a tsunami advisory. Residents were urged to stay away from the coastline, but there were no immediate reports of injuries or serious damage." +
                                     "#Japan #japanearthquake #news18live" +
@@ -353,6 +366,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake: Why Japan issued its first-ever 'megaquake advisory' | WION Pulse")
                             .url("https://www.youtube.com/watch?v=FCL2K1GX_U4")
+                            .thumbnail("https://img.youtube.com/vi/FCL2K1GX_U4/mqdefault.jpg")
                             .description("Japan has issued its first-ever advisory on higher-than-usual risks of a megaquake after an earthquake of magnitude 7.1 jolted on Thursday at the edge of a tremulous seabed zone along the Pacific coast known as the Nankai Trough. A possible Nankai megaquake and tsunami disaster could kill hundreds of thousands of people and cause a trillion-dollar damage to Japan." +
                                     "#japan #japanearthquake #trendingnews " +
                                     "About Channel: " +
@@ -378,6 +392,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan trembles under the shadow of Megaquake | Latest News | WION")
                             .url("https://www.youtube.com/watch?v=ddN-23IKbwA")
+                            .thumbnail("https://img.youtube.com/vi/ddN-23IKbwA/mqdefault.jpg")
                             .description("Megaquake alert in Japan. Experts say 70% chance of a magnitude 8 or 9 striking. Japan's meteorological agency maintains Megaquake advisory. Watch in for more details." +
                                     "#japanearthquake #megaquake #climatechange " +
                                     "About Channel: " +
@@ -405,6 +420,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G")
                             .url("https://www.youtube.com/watch?v=LLe9Bic7WUw")
+                            .thumbnail("https://img.youtube.com/vi/LLe9Bic7WUw/mqdefault.jpg")
                             .description("Japan Earthquake 2024 LIVE | Powerful Earthquake Hits Off Southern Japan, Tsunami Alert On | N18G" +
                                     "A powerful earthquake struck off Japan’s southern coast on August 8, triggering a tsunami advisory. Residents were urged to stay away from the coastline, but there were no immediate reports of injuries or serious damage." +
                                     "#Japan #japanearthquake #news18live" +
@@ -418,6 +434,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan Earthquake: Why Japan issued its first-ever 'megaquake advisory' | WION Pulse")
                             .url("https://www.youtube.com/watch?v=FCL2K1GX_U4")
+                            .thumbnail("https://img.youtube.com/vi/FCL2K1GX_U4/mqdefault.jpg")
                             .description("Japan has issued its first-ever advisory on higher-than-usual risks of a megaquake after an earthquake of magnitude 7.1 jolted on Thursday at the edge of a tremulous seabed zone along the Pacific coast known as the Nankai Trough. A possible Nankai megaquake and tsunami disaster could kill hundreds of thousands of people and cause a trillion-dollar damage to Japan." +
                                     "#japan #japanearthquake #trendingnews " +
                                     "About Channel: " +
@@ -443,6 +460,7 @@ public class SeedController<T> {
                     Video.builder()
                             .title("Japan trembles under the shadow of Megaquake | Latest News | WION")
                             .url("https://www.youtube.com/watch?v=ddN-23IKbwA")
+                            .thumbnail("https://img.youtube.com/vi/ddN-23IKbwA/mqdefault.jpg")
                             .description("Megaquake alert in Japan. Experts say 70% chance of a magnitude 8 or 9 striking. Japan's meteorological agency maintains Megaquake advisory. Watch in for more details." +
                                     "#japanearthquake #megaquake #climatechange " +
                                     "About Channel: " +

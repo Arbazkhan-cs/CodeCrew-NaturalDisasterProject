@@ -46,6 +46,7 @@ public class DisasterServiceImpl implements DisasterService {
                                 .map((video) -> VideoData.builder()
                                         .title(video.getTitle())
                                         .description(video.getDescription())
+                                        .thumbnail(video.getThumbnail())
                                         .url(video.getUrl())
                                         .publishedDate(video.getPublishedDate())
                                         .build())
